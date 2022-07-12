@@ -9,6 +9,7 @@ export const Nav = () => {
     const handleClick = () => setNav(!nav)
     const navigate = useNavigate()
     const handleNavigate = () => navigate('/Login')
+    
     console.log(nav)
     
   return (
@@ -16,7 +17,7 @@ export const Nav = () => {
         <div className='flex items-center justify-between w-full h-full px-2 ' >
              <div className='flex items-center justify-between w-full h-full '>
                 
-                <img className='mr-4 w-[150px] h-[80px]  sm:bg-contain' src={bglogo}/>
+                
                 <ul className='hidden md:flex'>
                     <li className='flex pb-1 mb-1 ml-4 hover:border-b-2 border-b-black '>
                         <NavLink to='/'>Home</NavLink>
@@ -38,11 +39,11 @@ export const Nav = () => {
                     <button className='px-5 py-2 mr-4' onClick={handleNavigate}>Login</button> 
                 </div>
                 <div className='md:hidden' onClick={handleClick}>
-                    {true ? <MenuIcon className='w-5'/> : <XIcon className='w-5'/>}
+                    {!nav ? <MenuIcon className='w-5'/> : <XIcon className='w-5'/>}
                 </div>    
             </div>
         </div>
-        <ul className={!nav ? 'hidden': 'absolute w-full px-8 bg-zinc-200 md:hidden '}>
+        <ul onClick={handleClick} className={!nav ? 'hidden': 'absolute w-full px-8 bg-zinc-200 md:hidden '}>
             <li className='w-full border-b-2 border-zinc-300 hover:text-blue-500'>
                 <NavLink to='/'>Home</NavLink>
             </li>
