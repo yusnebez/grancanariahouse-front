@@ -14,6 +14,7 @@ export const useVilla = () => {
     return context
 }
 
+
 export const GeneralProvider = ({children}) =>{
 
     const [villa, setVilla] = useState ([])
@@ -39,6 +40,7 @@ export const GeneralProvider = ({children}) =>{
 
     const deleteVilla = async (id) =>{
         const res= await deleteVillaRequest(id)
+        getAllVillas()
     }
 
     const updateVilla = async (id,villa) => {
@@ -61,8 +63,8 @@ export const GeneralProvider = ({children}) =>{
     
     useEffect( () => {
         getAllVillas()
-    }, [villa])
-
+    },[])
+    
     
     return <villaContext.Provider value={{
         villa,

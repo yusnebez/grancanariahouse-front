@@ -3,6 +3,8 @@ import { Formik, Form, Field, ErrorMessage } from "formik"
 import { useNavigate,Link, useParams } from "react-router-dom"
 import {useVilla} from "../context/GeneralContext"
 import * as Yup from 'yup'
+import {AiFillBulb} from 'react-icons/ai'
+
 
 export const EditVillaForm = () => {
   
@@ -32,6 +34,8 @@ export const EditVillaForm = () => {
     })();
   }, [params.id, getVilla]);
   
+
+
   return (
     <div className="flex items-center w-screen h-screen justify-center  bg-[url('https://res.cloudinary.com/zeben/image/upload/v1652106869/Villas-Modernas-La-Boladilla-Estepona_ukljno.jpg')] bg-cover">
       <div className="p-10 shadow-md bg-white shadow-black w-[500px]">

@@ -23,6 +23,7 @@ const App = () => {
           <Route path='/panelcontrol' element={<PanelControl />}/>
           <Route path='/new' element={<NewVillaForm/>}/>
           <Route path='/villa/:id' element={<VillaOne/>}/>
+          <Route path='/villa' element={<VillaOne/>}/>
           <Route path='/edit/:id' element={<EditVillaForm/>}/>
           <Route path='/pay/:id' element={<PayCard/>}/>
           <Route path='/login' element={<Login/>}/>
