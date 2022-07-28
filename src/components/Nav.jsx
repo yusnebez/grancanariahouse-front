@@ -13,36 +13,32 @@ export const Nav = () => {
     console.log(nav)
     
   return (
-    <div className=' w-full h-[80px]  bg-white  z-10 '>
-        <div className='flex items-center justify-between w-full h-full px-2 ' >
-             <div className='flex items-center justify-between w-full h-full '>
-                
-                
-                <ul className='hidden md:flex'>
-                    <li className='flex pb-1 mb-1 ml-4 hover:border-b-2 border-b-black '>
-                        <NavLink to='/'>Home</NavLink>
-                    </li>
-                    <li className='flex pb-1 mb-1 ml-4 hover:border-b-2 border-b-black'>
-                        <NavLink to='/holidayrental'>Holiday Rental</NavLink>
-                    </li>
-                    <li className='flex pb-1 mb-1 ml-4 hover:border-b-2 border-b-black'>
-                        <NavLink to='/longtermrental'>Long Term</NavLink>
-                    </li>
-                    <li className='flex pb-1 mb-1 ml-4 hover:border-b-2 border-b-black'>
-                        <NavLink to='/sales'>Sales</NavLink> 
-                    </li>
-                    <li className='flex pb-1 mb-1 ml-4 hover:border-b-2 border-b-black'>
-                        <NavLink to='/contact'>Contact</NavLink>
-                    </li>
+    <div className='w-full h-[70px] bg-white  z-10 '>
+        <div className='hidden mt-2 mb-1 text-center md:grid-cols-2 md:grid'>
+            <ul className=''>
+                <li className='hover:border-b-2 border-b-black'>
+                    <NavLink to='/'>Home</NavLink>
+                </li>
+                <li className='hover:border-b-2 border-b-black'>
+                    <NavLink to='/holidayrental'>Holiday Rental</NavLink>
+                </li>
+                <li className='hover:border-b-2 border-b-black'>
+                    <NavLink to='/longtermrental'>Long Term</NavLink>
+                </li>
+                <li className='hover:border-b-2 border-b-black'>
+                    <NavLink to='/sales'>Sales</NavLink> 
+                </li>
+                <li className='hover:border-b-2 border-b-black'>
+                    <NavLink to='/contact'>Contact</NavLink>
+                </li>
+                <li>
+                    <button className='' onClick={handleNavigate}>Login</button> 
+                </li>
                 </ul>
-                <div className='hidden pr-4 md:flex'>
-                    <button className='px-5 py-2 mr-4' onClick={handleNavigate}>Login</button> 
-                </div>
-                <div className='md:hidden' onClick={handleClick}>
-                    {!nav ? <MenuIcon className='w-5'/> : <XIcon className='w-5'/>}
-                </div>    
+        </div>  
+            <div className='md:hidden' onClick={handleClick}>
+                {!nav ? <MenuIcon className='w-5'/> : <XIcon className='w-5'/>} 
             </div>
-        </div>
         <ul onClick={handleClick} className={!nav ? 'hidden': 'absolute w-full px-8 bg-zinc-200 md:hidden '}>
             <li className='w-full border-b-2 border-zinc-300 hover:text-blue-500'>
                 <NavLink to='/'>Home</NavLink>

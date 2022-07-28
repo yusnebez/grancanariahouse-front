@@ -1,4 +1,4 @@
-import { Presentacion} from '../components/Presentación'
+import { Fondo} from '../components/Fondo'
 import {Textintro} from '../components/Textintro'
 import {Nav} from '../components/Nav'
 import '../index.css'
@@ -12,7 +12,7 @@ export const Home = () => {
   return (
     <div >
       <Nav />
-      <Presentacion />
+      <Fondo />
       <Textintro />
       <ListVilla />
       <Footer />
